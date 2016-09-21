@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<configuration>
+
+    <property name="LogHome" value="/opt/muks/logging" />
+
+
+    <appender name="FILE-ENGINE-1" class="ch.qos.logback.core.FileAppender">
+        <file>${LogHome}/${log1.name}.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.muks.logging" level="debug" additivity="false">
+        <appender-ref ref="FILE-ENGINE-1" />
+    </logger>
+
+    <appender name="FILE-ENGINE-2" class="ch.qos.logback.core.FileAppender">
+        <file>${LogHome}/${log2.name}.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.muks.logging" level="debug" additivity="false">
+        <appender-ref ref="FILE-ENGINE-2" />
+    </logger>
+
+
+
+    <root level="debug">
+        <appender-ref ref="FILE-ENGINE-1" />
+        <appender-ref ref="FILE-ENGINE-2" />
+    </root>
+
+</configuration>

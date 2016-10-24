@@ -1,9 +1,5 @@
 package com.muks.logging;
 
-
-import com.myntra.touch.utils.LogMaster;
-import com.myntra.touch.utils.LoggerUtil;
-
 import org.slf4j.Logger;
 
 /**

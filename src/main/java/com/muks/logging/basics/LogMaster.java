@@ -1,4 +1,4 @@
-package com.muks.logging;
+package com.muks.logging.basics;
 
 
 import org.slf4j.LoggerFactory;

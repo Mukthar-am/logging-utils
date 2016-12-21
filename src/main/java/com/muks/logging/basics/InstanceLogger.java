@@ -1,4 +1,4 @@
-package com.muks.logging;
+package com.muks.logging.basics;
 
 import org.slf4j.LoggerFactory;
 
@@ -19,8 +19,10 @@ public class InstanceLogger {
 
 
     public static void main(String[] args) {
+
         new InstanceLogger().start();
     }
+
     public void start() {
         foo = createLoggerFor("foo", "/Users/15692/Downloads/foo.log");
         bar = createLoggerFor("bar", "/Users/15692/Downloads/bar.log");
